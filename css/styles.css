@@ -2,11 +2,12 @@ body {
     text-align: center;
     color: gray;
     font-size: 20px;
+    background-color: ivory;
 }
 
 .jumbotron {
     padding: 2%;
-    background: orange;
+    background: mediumblue;
     color: #fff;
 }
 
