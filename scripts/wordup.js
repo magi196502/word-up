@@ -390,7 +390,7 @@ function currentScore() {
 /**
  * Randomly selects n items from a list.
  * Returns the selected items together in a (smaller) list.
- */
+
 function chooseN(n, items) {
     var selectedItems = [];
     var total = Math.min(n, items.length);
@@ -400,6 +400,32 @@ function chooseN(n, items) {
         items.splice(index, 1);
     }
     return selectedItems;
+}
+
+
+ */
+function chooseN(n, items) {
+    var selectedItems = [];
+
+    var total = Math.min(n, items.length);
+    for (var i = 0; i < total; i++) {
+        index = Math.floor(Math.random() * items.length);
+        selectedItems.push(items[index]);
+        items.splice(index, 1);
+    }
+
+      return selectedItems;
+}
+
+function containsVowel(selItems){
+    var vowels = [ 'a', 'e', 'i', 'o', 'u' ];
+    var vowelFound = false;
+    vowels.forEach(function(element){
+        if (selItems.indexOf(element)>0)
+            vowelFound = true;
+    });
+
+    return vowelFound;
 }
 
 /**
